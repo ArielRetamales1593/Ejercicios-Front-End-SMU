@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Formulario de registro</h2>
+    <form>
+      <label>Nombre Completo:</label>
+      <input type="text" required /><br /><br />
+
+      <label>Correo electrónico:</label>
+      <input type="email" required /><br /><br />
+
+      <label>Contraseña:</label>
+      <input type="password" required /><br /><br />
+      <label>Confirmar Contraseña: </label>
+      <input type="password" required /><br /><br />
+
+      <label>Seleccione su nacionalidad</label>
+      <select required>
+        <option value="">Chile</option>
+        <option value="">Venezuela</option>
+        <option value="">Argentina</option>
+        <option value="">Colombia</option>
+      </select>
+
+      <fieldset>
+        <legend>Fecha de nacimiento</legend>
+
+        <input type="date" required />
+      </fieldset>
+
+      <label>Ingrese su genero :</label>
+      <br />
+
+      <label>Masculino</label>
+      <input type="radio" />
+      <label>Femenino</label>
+      <input type="radio" />
+      <label>Otro</label>
+      <input type="radio" />
+      <br />
+
+      <label>Acepto los terminos</label>
+      <input type="checkbox" required />
+      <br />
+
+      <input type="submit" />
+    </form>
+  </body>
+</html>
