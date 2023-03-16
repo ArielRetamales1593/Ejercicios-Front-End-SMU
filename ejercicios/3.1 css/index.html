@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- 
+
+    l objetivo de la actividad es que el estudiante practique los fundamentos de CSS, utilizando las propiedades básicas de CSS para personalizar la apariencia de una página web sencilla. La actividad busca que el estudiante aprenda a aplicar estilos CSS para modificar el aspecto de los elementos HTML y mejorar la presentación visual de la página web, así como a experimentar con diferentes estilos y técnicas para lograr una apariencia única y atractiva. Además, la actividad fomenta el desarrollo de habilidades de resolución de problemas y pensamiento crítico, ya que el estudiante debe aplicar lo que ha aprendido sobre CSS e investigar elementos adicionales para lograr el resultado deseado en su página web.
+
+Instrucciones
+Crea un archivo HTML básico que contenga:
+
+Una cabecera con logo como imagen y texto en H1 con el nombre de la empresa
+Un menú de navegación con al menos 5 elementos, al pasar el cursor sobre los elementos deben cambiar de color
+Un pié de página con los datos de contacto de la empresa u organización
+Una sección principal con al menos contenido textual (título, subtítulos, 2 párrafos o más e imágenes)
+Una sección lateral que recomienda más contenido para navegar
+Se solicita
+Desarrollar archivo HTML y CSS (externo)
+Usar propiedades CSS para trabajo con texto, fondos, bordes, dimensiones y otros
+Aprovechar la cascada de CSS para no repetir código
+Usar el modelo de cajas de CSS para el espacio entre elementos
+En esta instancia NO es necesario preocuparse del maquetado o layout
+Desplegar en Github Pages
+Validar y corregir si es necesario el código HTML y CSS en W3C Validator -->
+  </head>
+  <body>
+    <header>
+      <h1>
+        Kzata <br />
+        clothes
+      </h1>
+      <nav class="header__nav">
+        <ul>
+          <li>Inicio</li>
+          <li>Artistas</li>
+          <li>Productos</li>
+          <li>Novedades</li>
+          <li>Contacto</li>
+        </ul>
+      </nav>
+
+      <img id="header__logo" src="../../assets/Asset 21.png" alt="" />
+    </header>
+
+    <main class="main__contenedor">
+      <img class="main__img" src="../../assets/polera.jpg" alt="" />
+
+      <article class="main__article">
+        <h2 class="article__titulo">Nueva colección</h2>
+        <p>
+          <i>
+            Nueva colección de poleras de manga corta y ajustadas es una línea
+            moderna y atrevida que está diseñada para el público que busca un
+            look fresco y audaz. Estas poleras están fabricadas con telas suaves
+            y elásticas que ofrecen un gran confort y una sensación de libertad
+            de movimiento.
+          </i>
+        </p>
+      </article>
+      <aside>
+        <h2>Novedades en poleras</h2>
+
+        <img
+          src="../../assets/polera_blanca_radiohead_h_700x.jpg"
+          alt=""
+          width="250px"
+        />
+        <p>
+          Si eres un apasionado de la música y quieres lucir a la última moda,
+          no puedes dejar pasar la oportunidad de hacerte con las últimas
+          novedades en poleras de bandas de música
+        </p>
+
+        <button>Ver más</button>
+      </aside>
+    </main>
+  </body>
+</html>

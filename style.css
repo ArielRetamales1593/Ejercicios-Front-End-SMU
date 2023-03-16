@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: gray;
+}
+.nav__img {
+  width: 60px;
+}

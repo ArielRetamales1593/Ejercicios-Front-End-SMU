@@ -8,9 +8,10 @@
   </head>
   <body>
     <h2>Formulario de registro</h2>
-    <form>
-      <label>Nombre Completo:</label>
-      <input type="text" required /><br /><br />
+
+    <form action="index.html" method="get">
+      <label for="name">Nombre Completo:</label>
+      <input type="text" required id="name" /><br /><br />
 
       <label>Correo electrónico:</label>
       <input type="email" required /><br /><br />
@@ -22,10 +23,11 @@
 
       <label>Seleccione su nacionalidad</label>
       <select required>
-        <option value="">Chile</option>
-        <option value="">Venezuela</option>
-        <option value="">Argentina</option>
-        <option value="">Colombia</option>
+        <option>Seleccione un pais</option>
+        <option>Chile</option>
+        <option>Venezuela</option>
+        <option>Argentina</option>
+        <option>Colombia</option>
       </select>
 
       <fieldset>
@@ -37,12 +39,12 @@
       <label>Ingrese su genero :</label>
       <br />
 
-      <label>Masculino</label>
-      <input type="radio" />
-      <label>Femenino</label>
-      <input type="radio" />
-      <label>Otro</label>
-      <input type="radio" />
+      <label for="masculino">Masculino</label>
+      <input type="radio" id="masculino" name="genero" />
+      <label for="femenino">Femenino</label>
+      <input type="radio" id="femenino" name="genero" />
+      <label for="otro"> Otro</label>
+      <input type="radio" id="otro" name="genero" />
       <br />
 
       <label>Acepto los terminos</label>
