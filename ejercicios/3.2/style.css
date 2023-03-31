@@ -79,5 +79,13 @@ h2 {
   background-color: #c6d0e5;
   color: #224baf;
   width: 50px;
-  border: solid 1px white;
+}
+
+th,
+td {
+  border: solid 1px black;
+}
+/* una sola linea  */
+table {
+  border-collapse: collapse;
 }

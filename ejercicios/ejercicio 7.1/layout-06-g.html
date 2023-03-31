@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Layout XX - CSS Grid</title>
+    <style>
+      header,
+      nav,
+      article,
+      aside,
+      footer {
+        background-color: yellow;
+      }
+      body {
+        margin: 5px;
+        padding: 0;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 5px;
+
+        grid-template-areas:
+          "h h h h h "
+          "n ar ar ar ar"
+          "n ar ar ar ar"
+          "n a a a a"
+          " f f f f f ";
+      }
+
+      header {
+        grid-area: h;
+        background-color: aqua;
+
+        height: 115px;
+      }
+      nav {
+        grid-area: n;
+        background-color: bisque;
+        height: 400px;
+      }
+      /* main {
+        grid-area: m;
+        background-color: blueviolet;
+        height: 500px;
+      } */
+      aside {
+        grid-area: a;
+        background-color: brown;
+        height: 120px;
+      }
+      footer {
+        grid-area: f;
+        background-color: beige;
+        height: 115px;
+      }
+      article {
+        grid-area: ar;
+        background-color: black;
+        height: 276px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Header</header>
+    <nav>Nav</nav>
+    <article>Article</article>
+    <aside>Aside</aside>
+    <footer>Footer</footer>
+  </body>
+</html>

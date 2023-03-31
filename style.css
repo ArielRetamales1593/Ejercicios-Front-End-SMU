@@ -1,15 +1,39 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  background-color: #d3d9e9;
+  font-family: "Poppins", sans-serif;
 }
 
-.header__nav {
-  display: flex;
-  justify-content: space-between;
-  background-color: gray;
+h1 {
+  text-align: center;
+  color: white;
+  margin-top: 200px;
+  margin-bottom: 50px;
 }
-.nav__img {
-  width: 60px;
+
+a:hover {
+  text-shadow: 0 0 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contenedorListas {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.contenedorListas :hover {
+  color: white;
+}
+
+.cont2 {
+  margin-top: 100px;
+}
+
+ul {
+  list-style: none;
 }
