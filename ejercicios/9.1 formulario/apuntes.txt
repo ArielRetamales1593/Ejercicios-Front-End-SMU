@@ -1,0 +1,106 @@
+// modificar texto de un nodo
+// const titulo = document.querySelector("h1");
+// // query selector puede ser por clase css o etiqueta
+// titulo.innerHTML = "hola mucho gusto";
+
+// Cambiar alguna propiedad, en este caso la clas
+// titulo.setAttribute("class", "saludo2");
+
+// // se crea una constante y se crea el elemento, en este caso un p
+// const otroParrafo = document.createElement("p");
+// otroParrafo.textContent = "soy un parrafo de ejemplo";
+// document.querySelector("h1").appendChild(otroParrafo);
+
+// titulo.style.color = "red";
+
+// // innertext cambia el texto del nodo o tag o lo que sea
+// titulo.innerText = "adios";
+
+// console.log(titulo.innerText);
+
+// inner.html
+// titulo.innerHTML = `<h2> hola el texto del nodo</h2>`;
+// modifica el nodo , incluso puede agregar elementos
+
+// Validar los campos al momento de digitarlos o al cambiar al siguiente campo.
+// Asignar un fondo o borde de color verde al campo en caso de que sea válido y rojo en caso contrario.
+// Incluir texto explicativo para los casos en que la validación de un campo falle.
+// Utilizar al menos 5 campos en su formulario, tales como RUT, nombre, dirección, comuna, etc.
+// Comparta su URL de Github Page para revisión
+// Con estas instrucciones, se espera que pueda aplicar correctamente las técnicas de validación en su formulario y garantizar una mejor experiencia de usuario.
+
+// evento click
+
+// const saludar = () => {
+//   alert("hola mi buen");
+// };
+
+// btn.addEventListener("click", saludar);
+
+// for of recorre los valores
+// for in las keys\
+
+
+
+
+validar rut Chileno 
+
+var Rut = {
+  // Valida el rut con su cadena completa "XXXXXXXX-X"
+  validaRut: function (rutCompleto) {
+    rutCompleto = rutCompleto.replaceAll(".", "");
+    if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test(rutCompleto)) return false;
+    var tmp = rutCompleto.split("-");
+    var digv = tmp[1];
+    var rut = tmp[0];
+    if (digv == "K") digv = "k";
+
+    return Rut.dv(rut) == digv;
+  },
+  dv: function (T) {
+    var M = 0,
+      S = 1;
+    for (; T; T = Math.floor(T / 10)) S = (S + (T % 10) * (9 - (M++ % 6))) % 11;
+    return S ? S - 1 : "k";
+  },
+};
+
+const iRut = document.querySelector("input#rut");
+const mRut = document.querySelector("input#rut + span");
+iRut.addEventListener("blur", (e) => {
+  const rut = iRut.value;
+  if (!Rut.validaRut(rut)) {
+    mRut.textContent = "RUT inválido!";
+    mRut.classList.add("error");
+    iRut.classList.add("error");
+  } else {
+    iRut.classList.remove("error");
+    mRut.classList.remove("error");
+    mRut.textContent = "";
+  }
+});
+
+// const iNombre = document.querySelector("input#nombre");
+// const mNombre = document.querySelector("input#nombre + span");
+// iNombre.addEventListener('blur', (e) => {
+//     if( iNombre.value.length < 3 ) {
+//         mNombre.textContent = "Nombre muy corto";
+//         mNombre.classList.add("error");
+//         iNombre.classList.add("error");
+//     } else {
+//         iNombre.classList.remove("error");
+//         mNombre.classList.remove("error");
+//         mNombre.textContent = "";
+//     }
+// });
+
+// const sComuna = document.querySelector("select#comuna");
+// const mComuna = document.querySelector("select#comuna + span");
+// sComuna.addEventListener('blur', (e) => {
+//     if( sComuna.value == "" ) {
+//         mComuna.textContent = "Debe seleccionar una comuna";
+//         mComuna.classList.add("error");
+//     }
+// });
+
+// https://codepen.io/josefosaurus/pen/Jjjazaw

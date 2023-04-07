@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="./script.js"></script>
+    <style>
+      .err {
+        border: solid 2px red;
+      }
+
+      .done {
+        border: solid 2px green;
+      }
+
+      p {
+        color: red;
+        width: 250px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      * {
+        background-color: aliceblue;
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <form action="" method="post">
+      <h1 class="saludo">Formulario con validaciones</h1>
+      <label for="name">Nombre</label>
+      <input type="text" name="name" id="name" required />
+      <p class="errorNom"></p>
+
+      <label for="mail">Correo</label>
+      <input type="text" name="mail" id="email" />
+      <p class="errorMail"></p>
+
+      <label for="phone">Telefono</label>
+      <input type="number" name="telefono" id="phone" />
+
+      <label for="rut">Rut</label>
+      <input type="text" name="rut" id="rut" />
+
+      <label for="password">Contraseña</label>
+      <input type="password" name="password" id="password" />
+      <p class="errorPassword"></p>
+
+      <label for="password2">Repita Contraseña</label>
+      <input type="password" name="password2" id="password2" />
+      <p class="errorPassword2"></p>
+      <input type="submit" id="boton" />
+    </form>
+  </body>
+</html>
